@@ -11,8 +11,15 @@ public class bank_system
 
     public void setDeposit(double amount)
     {
-        System.out.println();
-        balance += amount;
+        if(amount > 0)
+        {
+            balance += amount;
+            System.out.print(amount + " deposited successfully!");
+        }
+        else
+        {
+            System.out.print("Deposit amount must be positive!");
+        }
     }
 
     public void setWithDraw(double amount)
@@ -30,6 +37,7 @@ public class bank_system
         else
         {
             balance -= amount;
+            System.out.print(amount + " withdraw successfully")
         }
     }
 
