@@ -1,11 +1,13 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 public class main
 {
     public static void main(String[] args)
     {
         ArrayList<BankSystem> accounts = new ArrayList<>();
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         String accountName;
+        double initialBalance;
         int inp;
 
         while(true)
@@ -18,13 +20,17 @@ public class main
                     "4)View balance\n" +
                     "5)Exit\n" +
                     "---------------------------------------------------\n" + "Answer: ");
-            inp = input.nextInt();
+            inp = scanner.nextInt();
             switch (inp) {
-                case 1: System.out.print("Please enter the account name: ");
-                        accountName = input.NextString();
-                case 2: b1.setDeposit(1000); break;
-                case 3: b1.setWithDraw(2000); break;
-                case 4: b1.displayBalance(); break;
+                case 1: System.out.print("Enter owner's name: ");
+                        accountName = scanner.nextLine();
+                        System.out.print("Enter initial balance: ");
+                        initialBalance = scanner.nextDouble();
+                        accounts.add(new BankSystem(accountName,initialBalance));
+
+                case 2:
+                case 3:
+                case 4:
                 case 5: System.exit(0);
                 default:
                     System.out.println("Invalid Operation!");

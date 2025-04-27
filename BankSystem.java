@@ -1,9 +1,9 @@
-public class bank_system
+public class BankSystem
 {
     private String ownerName;
     private double balance;
 
-    public bank_system(String ownerName, double balance)
+    public BankSystem(String ownerName, double balance)
     {
         this.ownerName = ownerName;
         this.balance = balance;
@@ -37,7 +37,7 @@ public class bank_system
         else
         {
             balance -= amount;
-            System.out.print(amount + " withdraw successfully")
+            System.out.print(amount + " withdraw successfully!");
         }
     }
 
